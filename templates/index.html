@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Blog Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">BlogGen</div>
+    <ul class="nav-links">
+      <li><a href="#" onclick="downloadPDF()">Download PDF</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#"><i class="fas fa-search"></i> More</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="overlay">
+      <h1>Welcome to AI Blog Generator</h1>
+      <p>Generate blogs instantly with AI</p>
+    </div>
+  </header>
+
+  <section class="generator">
+    <textarea id="prompt" placeholder="Enter your blog topic..."></textarea>
+    <button onclick="generateBlog()">Generate Blog</button>
+    <div id="output"></div>
+  </section>
+
+  <footer class="intro">
+    <span class="typing-text"></span>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
